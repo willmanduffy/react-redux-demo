@@ -4,16 +4,12 @@ import Buttons from './Buttons';
 import Display from './Display';
 
 const App = ({ store }) => {
-  console.log('App rendered');
-
   return (
     <Container dispatch={store.dispatch} state={store.getState()} />
   );
 };
 
 const Container = ({ dispatch, state }) => {
-  console.log('Container rendered');
-
   const onAlphaButtonClick = () => dispatch({ type: 'INCREASE_ALPHA' });
   const onChangeTextButtonClick = () => dispatch({ type: 'CHANGE_BUTTON_TEXT' });
   const onNumberButtonClick = () => dispatch({ type: 'INCREASE_NUMBER' });
